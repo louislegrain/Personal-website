@@ -744,3 +744,18 @@ footer a img {
         margin: 10px 0;
     }
 }
+
+@media screen and (min-width: 1250px) {
+    #projets .flex > a {
+        max-width: 400px;
+    }
+    #projets .flex > a:nth-child(odd) {
+        margin-left: calc(50% - 400px);
+    }
+    #projets .flex > a:nth-child(even) {
+        margin-right: calc(50% - 400px);
+    }
+    .big-h2 {
+        font-size: 39px;
+    }
+}
