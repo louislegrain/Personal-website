@@ -97,8 +97,8 @@ function carouselBtnClick(direction) {
         sliderTransform -= initialSliderTransform * direction;
         slider.style.transform = `translateX(${sliderTransform}%)`;
         setTimeout(() => {
-            direction * (-1) === 1 ? slider.appendChild(slider.firstElementChild) : slider.prepend(slider.lastElementChild);
             slider.style.transition = 'none';
+            direction === -1 ? slider.appendChild(slider.firstElementChild) : slider.prepend(slider.lastElementChild);
             sliderTransform += initialSliderTransform * direction;
             slider.style.transform = `translateX(${sliderTransform}%)`;
             canClick = true;
@@ -108,29 +108,39 @@ function carouselBtnClick(direction) {
 
 const sensibility = 20;
 let touchStart;
+let touching = false;
+let offset = 0;
 
 carousel.addEventListener('touchstart', (e) => {
-    canClick = false;
-    touchStart = e.changedTouches[0].clientX;
+    if (canClick) {
+        canClick = false;
+        touching = true;
+        touchStart = e.targetTouches[0].clientX;
+    }
 }, { passive: true });
 
 carousel.addEventListener('touchmove', (e) => {
-    const carouselItemWidth = slider.offsetWidth * (initialSliderTransform / -100);
-    slider.style.transform = `translateX(calc(${initialSliderTransform}% + ${Math.abs(e.changedTouches[0].clientX - touchStart) <= carouselItemWidth + 0.021 * slider.offsetWidth ? e.changedTouches[0].clientX - touchStart : e.changedTouches[0].clientX - touchStart > carouselItemWidth + 0.021 * slider.offsetWidth ? carouselItemWidth + 0.021 * slider.offsetWidth : (carouselItemWidth + 0.021 * slider.offsetWidth) * -1}px))`;
+    if (touching) {
+        const carouselItemWidth = slider.offsetWidth * (initialSliderTransform / -100);
+        offset = Math.abs(e.targetTouches[0].clientX - touchStart) <= carouselItemWidth + 0.021 * slider.offsetWidth ? e.targetTouches[0].clientX - touchStart : e.targetTouches[0].clientX - touchStart > carouselItemWidth + 0.021 * slider.offsetWidth ? carouselItemWidth + 0.021 * slider.offsetWidth : (carouselItemWidth + 0.021 * slider.offsetWidth) * -1;
+        slider.style.transform = `translateX(calc(${initialSliderTransform}% + ${offset}px))`;
+    }
 }, { passive: true });
 
-carousel.addEventListener('touchend', (e) => {
-    canClick = true;
-    const touchEnd = e.changedTouches[0].clientX;
-    if (touchStart - touchEnd > sensibility) {
-        carouselBtnClick(1);
-    } else if (touchEnd - touchStart > sensibility) {
-        carouselBtnClick(-1);
-    } else {
-        slider.style.transform = `translateX(${initialSliderTransform}%)`;
+carousel.addEventListener('touchend', () => {
+    if (touching) {
+        canClick = true;
+        touching = false;
+        if (offset > sensibility) {
+            carouselBtnClick(-1);
+        } else if (offset < (sensibility * -1)) {
+            carouselBtnClick(1);
+        } else {
+            slider.style.transform = `translateX(${initialSliderTransform}%)`;
+            clearInterval(interval);
+            interval = setInterval(carouselBtnClick, 5000);
+        }
     }
-    clearInterval(interval);
-    interval = setInterval(carouselBtnClick, 5000);
 });
 
 document.getElementById('start-project-btn').addEventListener('click', () => {
