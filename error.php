@@ -1,18 +1,27 @@
+<?php
+$errorCode = 200;
+if (isset($_GET['error'])) {
+    $errorCode = htmlspecialchars($_GET['error']);
+}
+if ($errorCode == 200) {
+    header('Location: /');
+}
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-	<meta charset="UTF-8">
+    <meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Erreur 403</title>
+    <title>Erreur <?= $errorCode ?></title>
     <!-- SEO -->
-    <meta name="description" content="Erreur 403" />
+    <meta name="description" content="Erreur <?= $errorCode ?>" />
     <meta property="og:site_name" content="Louis Legrain" />
 	<meta property="og:locale" content="fr_FR">
-	<meta property="og:title" content="Erreur 403"/>
+	<meta property="og:title" content="Erreur <?= $errorCode ?>"/>
 	<meta property="og:type" content="website"/>
 	<meta property="og:image" content="https://louislegrain.online/ressources/og_image.jpg"/>
 	<meta property="og:image:alt" content="Logo de Louis Legrain" />
-	<meta property="og:description" content="Erreur 403"/>
+	<meta property="og:description" content="Erreur <?= $errorCode ?>"/>
 	<meta name="robots" content="noindex" />
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -40,7 +49,7 @@
             font-size: 1.25rem;
             font-weight: 700;
             text-align: center;
-            background-color: #f1f1f1;
+            background-color: #F1F1F1;
             min-height: 85vh;
             padding: 0 50px;
             display: flex;
@@ -95,8 +104,24 @@
 	<p class="browser-support-error">
         Cette page ne peut pas être affichée correctement sur votre navigateur car il est obsolète !
     </p>
-    <h1>403</h1>
-    <h2>Oups, l'accès est interdit.</h2>
+    <h1><?= $errorCode ?></h1>
+    <h2>
+    <?php
+    if ($errorCode == 400) {
+        echo 'Oups, mauvaise demande.';
+    } else if ($errorCode == 401) {
+        echo 'Oups, une autorisation est requise.';
+    } else if ($errorCode == 403) {
+        echo 'Oups, l\'accès est interdit.';
+    } else if ($errorCode == 404) {
+        echo 'Oups, cette page n\'existe pas.';
+    } else if ($errorCode == 500) {
+        echo 'Oups, le serveur a rencontré un problème.';
+    } else {
+        echo 'Une erreur est survenue.';
+    }
+    ?>
+    </h2>
     <a href="/">Retour à l'accueil</a>
 </body>
 </html>

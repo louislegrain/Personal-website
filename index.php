@@ -210,19 +210,20 @@
         </div>
         <div class="form-container flex">
             <h2>Discutons<br>ensemble.</h2>
-            <form action="https://formspree.io/f/mgerejjl" class="flex" method="POST">
+            <form action="/send-mail/" class="flex" method="POST">
                 <div class="input-container">
                     <input type="text" name="name" id="name" required>
                     <label for="name">Nom</label>
                 </div>
                 <div class="input-container">
-                    <input type="email" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" name="_replyto" id="email" required>
+                    <input type="email" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" name="email" id="email" required>
                     <label for="email">Email</label>
                 </div>
                 <div>
                     <textarea name="message" id="message" rows="3" required></textarea>
                     <label for="message">Message</label>
                 </div>
+                <div class="info">Vous pouvez envoyer un message dans ce formulaire de contact.</div>
                 <button type="submit" class="btn">Envoyer</button>
             </form>
         </div>

@@ -180,3 +180,44 @@ textarea.addEventListener('input', () => {
     textarea.style.height = 'auto';
     textarea.style.height = `${textarea.scrollHeight}px`;
 });
+
+const form = document.querySelector('form');
+const formMsg = form.querySelector('.info');
+const submitBtn = form.querySelector('button[type="submit"]');
+
+form.addEventListener('submit', e => {
+    e.preventDefault();
+    formMsg.innerHTML = 'Le message est en cours d\'envoi...';
+    formMsg.classList.remove('error');
+    formMsg.style.display = 'block';
+    fetch('/send-mail/', {
+        method: 'POST',
+        body: new URLSearchParams(new FormData(form))
+    })
+    .then(response => response.json())
+    .then(data => {
+        setTimeout(() => {
+            if (data.success === true) {
+                formMsg.innerHTML = 'Le message a bien été envoyé.';
+                submitBtn.setAttribute('disabled', '');
+            } else {
+                formMsg.classList.add('error');
+                if (data.errors.length < 1) {
+                    formMsg.innerHTML = 'Une erreur est survenue.';
+                } else {
+                    formMsg.innerHTML = '';
+                    for (let i = 0; i < data.errors.length; i++) {
+                        formMsg.innerHTML += data.errors[i];
+                        if (i < data.errors.length - 1) {
+                            formMsg.innerHTML += '<br>';
+                        }
+                    }
+                }
+            }
+        }, 400);
+    })
+    .catch(() => {
+        formMsg.classList.add('error');
+        formMsg.innerHTML = 'Une erreur est survenue.';
+    });
+});

@@ -29,6 +29,11 @@ a {
     color: inherit;
 }
 
+[disabled] {
+    opacity: .5;
+    cursor: default;
+}
+
 button {
     font: inherit;
     background: none;
@@ -544,7 +549,7 @@ footer input, footer textarea {
     font: inherit;
 }
 
-footer form > div::after {
+footer form > div:not(.info)::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -564,7 +569,18 @@ footer form > div:focus-within::after {
 
 footer form > div.invalid::after {
     background-position: 0;
-} 
+}
+
+footer .info {
+    font-weight: 500;
+    color: #6C63FF;
+    margin-bottom: 0;
+    display: none;
+}
+
+footer .info.error {
+    color: red;
+}
 
 footer label {
     color: #616880;
