@@ -44,7 +44,7 @@
             <ul class="flex">
                 <li><a href="#services">Services</a></li>
                 <li><a href="#experiences">Expériences</a></li>
-                <li><a href="#skills">Skills</a></li>
+                <li><a href="#competences">Compétences</a></li>
                 <li><a href="#projets">Projets</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -163,12 +163,13 @@
             </div>
         </div>
     </section>
-    <section id="skills" class="darker-section flex reveal-container">
-        <h2>Skills</h2>
+    <section id="competences" class="darker-section flex reveal-container">
+        <h2>Compétences</h2>
         <div class="range-container">
             <div class="range reveal"></div><span>HTML</span>
             <div class="range reveal"></div><span>CSS</span>
             <div class="range reveal"></div><span>Javascript</span>
+            <div class="range reveal"></div><span>PHP & MySQL</span>
         </div>
     </section>
     <section id="projets">
