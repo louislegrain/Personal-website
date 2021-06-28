@@ -170,6 +170,7 @@
             <div class="range reveal"></div><span>CSS</span>
             <div class="range reveal"></div><span>Javascript</span>
             <div class="range reveal"></div><span>PHP & MySQL</span>
+            <div class="range reveal"></div><span>React</span>
         </div>
     </section>
     <section id="projets">

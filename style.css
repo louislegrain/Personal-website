@@ -403,19 +403,23 @@ h4 {
 }
 
 .range-container .range:nth-of-type(1)::after {
-    width: 95%;
+    width: 100%;
 }
 .range-container .range:nth-of-type(2)::after {
-    width: 92%;
+    width: 95%;
     transition-delay: 0.2s !important;
 }
 .range-container .range:nth-of-type(3)::after {
-    width: 80%;
+    width: 85%;
     transition-delay: 0.4s !important;
 }
 .range-container .range:nth-of-type(4)::after {
-    width: 88%;
+    width: 90%;
     transition-delay: 0.6s !important;
+}
+.range-container .range:nth-of-type(5)::after {
+    width: 70%;
+    transition-delay: 0.8s !important;
 }
 
 #competences .reveal::after {
