@@ -55,7 +55,7 @@
         <div>
             <h1>Bonjour,<br>mon nom est <strong class="underline">Louis</strong></h1>
             <p>
-                Je suis un développeur web front-end français, aidant les entreprises à offrir de belles expériences en ligne, intuitives, réfléchies et avec un code accessible.
+                Je suis <strong>développeur web à Paris</strong>, et j'aide les entreprises à offrir de belles expériences en ligne, intuitives, réfléchies et avec un code accessible.
             </p>
             <a href="#contact" class="btn btn-light">Contactez-moi</a>
         </div>
