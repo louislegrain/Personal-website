@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
     <!-- SEO -->
-    <meta name="description" content="Je suis un développeur web front-end français, aidant les entreprises à offrir de belles expériences en ligne, intuitives, réfléchies et avec un code accessible." />
+    <meta name="description" content="Je suis développeur web à Paris, et j'aide les entreprises à offrir de belles expériences en ligne, intuitives, réfléchies et avec un code accessible." />
     <link rel="canonical" href="https://louislegrain.online" />
     <meta property="og:site_name" content="Louis Legrain" />
 	<meta property="og:locale" content="fr_FR">
@@ -19,7 +19,7 @@
 	<meta property="og:url" content="https://louislegrain.online"/>
 	<meta property="og:image" content="https://louislegrain.online/ressources/og_image.jpg"/>
 	<meta property="og:image:alt" content="Logo de Louis Legrain" />
-	<meta property="og:description" content="Je suis un développeur web front-end français, aidant les entreprises à offrir de belles expériences en ligne, intuitives, réfléchies et avec un code accessible."/>
+	<meta property="og:description" content="Je suis développeur web à Paris, et j'aide les entreprises à offrir de belles expériences en ligne, intuitives, réfléchies et avec un code accessible."/>
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="ressources/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="ressources/favicons/favicon-32x32.png">
