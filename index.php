@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Louis Legrain | Développeur web</title>
-    <link rel="stylesheet" href="style.min.css">
+    <link rel="stylesheet" href="style_v2.min.css">
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
@@ -220,6 +220,9 @@
                 <div class="input-container">
                     <input type="email" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" name="email" id="email" required>
                     <label for="email">Email</label>
+                </div>
+                <div class="no-spam" aria-hidden="true">
+                    <input type="text" name="maps-on" tabindex="-1">
                 </div>
                 <div>
                     <textarea name="message" id="message" rows="3" required></textarea>
