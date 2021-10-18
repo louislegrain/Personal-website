@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Louis Legrain | Développeur web</title>
-    <link rel="stylesheet" href="style_v2.min.css">
+    <link rel="stylesheet" href="style_v3.min.css">
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
@@ -194,12 +194,21 @@
                     </p>
                 </div>
             </a>
-            <a href="https://evansmediagency.com/" target="_blank" rel="noopener" title="Evan's Media" class="reveal-self">
+            <a href="https://evans-media.netlify.app/" target="_blank" rel="noopener" title="Evan's Media" class="reveal-self">
                 <div>
                     <div class="img-container"><img src="ressources/projets/evans_media.jpg" alt="Ordinateur affichant le site web de Evan's Media"></div>
                     <h4>Evan's Media</h4>
                     <p>
-                        Site web réalisé pour une agence SMMA experte dans la digitalisation des entreprises sur les réseaux sociaux et dans le neuromarketing.
+                        Agence SMMA experte dans la digitalisation des entreprises sur les réseaux sociaux et dans le neuromarketing.
+                    </p>
+                </div>
+            </a>
+            <a href="https://energy-data.io/en/degree-day-calculator-pro/" target="_blank" rel="noopener" title="Energy Data" class="reveal-self">
+                <div>
+                    <div class="img-container"><img src="ressources/projets/energy_data.jpg" alt="Ordinateur affichant le calculateur de Energy Data"></div>
+                    <h4>Energy Data</h4>
+                    <p>
+                        Startup qui aide les entreprises à analyser et à optimiser leur consommation d'énergie grâce à son API.
                     </p>
                 </div>
             </a>

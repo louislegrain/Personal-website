@@ -414,7 +414,7 @@ h4 {
     transition-delay: 0.4s !important;
 }
 .range-container .range:nth-of-type(4)::after {
-    width: 80%;
+    width: 70%;
     transition-delay: 0.6s !important;
 }
 .range-container .range:nth-of-type(5)::after {
@@ -430,10 +430,10 @@ h4 {
     width: 0;
 }
 
-#projets {
-    /* A retirer en cas de nombre pair de projets */
+/* A ajouter en cas de nombre impair de projets */
+/* #projets {
     margin-bottom: calc(-3.6vw - 130px);
-}
+} */
 
 #projets h2 {
     margin: 0 0 100px 0;
@@ -693,10 +693,10 @@ footer form .no-spam {
     .range-container {
         font-size: 15px;
     }
-    #projets {
-        /* A retirer en cas de nombre pair de projets */
+    /* A ajouter en cas de nombre impair de projets */
+    /* #projets {
         margin-bottom: calc(-7vw - 100px);
-    }
+    } */
     #projets .flex > a:nth-child(odd) {
         bottom: calc(7vw + 100px);
     }
