@@ -185,15 +185,6 @@
                     </p>
                 </div>
             </a>
-            <a href="https://www.newvisiongames.com/" target="_blank" rel="noopener" title="New Vision Games" class="reveal-self">
-                <div>
-                    <div class="img-container"><img src="ressources/projets/new_vision_games.jpg" alt="Ordinateur affichant le site web de New Vision Games"></div>
-                    <h4>New Vision Games</h4>
-                    <p>
-                        Mini-entreprise de l'école Sainte-Geneviève d'Asnières qui vend un jeu vidéo afin de sensibiliser au cancer chez l'enfant et reverser les bénéfices à une association.
-                    </p>
-                </div>
-            </a>
             <a href="https://evans-media.netlify.app/" target="_blank" rel="noopener" title="Evan's Media" class="reveal-self">
                 <div>
                     <div class="img-container"><img src="ressources/projets/evans_media.jpg" alt="Ordinateur affichant le site web de Evan's Media"></div>
@@ -203,7 +194,7 @@
                     </p>
                 </div>
             </a>
-            <a href="https://energy-data.io/en/degree-day-calculator-pro/" target="_blank" rel="noopener" title="Energy Data" class="reveal-self">
+            <a href="https://energy-data.io/energy-tools/degree-day-calculator-pro/" target="_blank" rel="noopener" title="Energy Data" class="reveal-self">
                 <div>
                     <div class="img-container"><img src="ressources/projets/energy_data.jpg" alt="Ordinateur affichant le calculateur de Energy Data"></div>
                     <h4>Energy Data</h4>

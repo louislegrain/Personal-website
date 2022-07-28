@@ -431,9 +431,9 @@ h4 {
 }
 
 /* A ajouter en cas de nombre impair de projets */
-/* #projets {
+#projets {
     margin-bottom: calc(-3.6vw - 130px);
-} */
+}
 
 #projets h2 {
     margin: 0 0 100px 0;
@@ -694,9 +694,9 @@ footer form .no-spam {
         font-size: 15px;
     }
     /* A ajouter en cas de nombre impair de projets */
-    /* #projets {
+    #projets {
         margin-bottom: calc(-7vw - 100px);
-    } */
+    }
     #projets .flex > a:nth-child(odd) {
         bottom: calc(7vw + 100px);
     }
